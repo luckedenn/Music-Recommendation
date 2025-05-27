@@ -229,13 +229,23 @@ def recommendation_system(song_name, artist_name=None, genre_filter=None, num=10
 
 Untuk lagu "Shape of You" by Ed Sheeran dengan filter genre "pop":
 
-| Track Name | Artist | Similarity Score |
-|------------|--------|------------------|
-| Castle on the Hill | Ed Sheeran | 0.847 |
-| Perfect | Ed Sheeran | 0.832 |
-| Thinking Out Loud | Ed Sheeran | 0.798 |
-| Photograph | Ed Sheeran | 0.785 |
-| What Do You Mean? | Justin Bieber | 0.743 |
+| No | Track Name                                                                                 | Artist                      | Similarity Score |
+|----|---------------------------------------------------------------------------------------------|-----------------------------|------------------|
+| 1  | Sunflower - Spider-Man: Into the Spider-Verse                                              | Post Malone                 | 0.964            |
+| 2  | The Weekend - Funk Wav Remix                                                               | SZA                         | 0.951            |
+| 3  | How You Love Me (feat. Conor Maynard & Snoop Dogg)                                         | Hardwell                    | 0.951            |
+| 4  | in my miNd                                                                                 | Maty Noyes                  | 0.926            |
+| 5  | Baby I'm Yours - feat. Irfane                                                              | Breakbot                    | 0.915            |
+| 6  | fuck, i'm lonely (with Anne-Marie) - from “13 Reasons Why: Season 3”                       | Lauv                        | 0.907            |
+| 7  | Johnny Run Away                                                                            | Tones and I                 | 0.905            |
+| 8  | Way Back Home                                                                              | SHAUN                       | 0.898            |
+| 9  | Starving                                                                                   | Hailee Steinfeld            | 0.897            |
+|10  | If I Can't Have You                                                                         | Shawn Mendes                | 0.895            |
+|11  | Alone, Pt. II                                                                              | Alan Walker                 | 0.893            |
+|12  | Gravity                                                                                    | Ralph                       | 0.891            |
+|13  | Show Me Love - EDX Remix / Radio Edit                                                      | Sam Feldt                   | 0.889            |
+|14  | Closer (feat. Halsey)                                                                      | The Chainsmokers            | 0.887            |
+|15  | Younger                                                                                    | Jonas Blue                  | 0.884            |
 
 ## Evaluation
 
@@ -272,15 +282,10 @@ def evaluate_recommendation(song_name, artist_name, top_k=10):
 ### Hasil Evaluasi:
 
 **Evaluasi Individual:**
-- Precision@10 untuk "Shape of You" by Ed Sheeran: **0.80**
+- Precision@10 untuk "Shape of You" by Ed Sheeran: **0.70**
 
-**Evaluasi Batch (10 lagu populer):**
-- Mean Precision@10: **0.73**
-
-**Analisis Hasil:**
-1. **Performa Baik**: Precision rata-rata 0.73 menunjukkan bahwa 73% rekomendasi memiliki genre yang sama dengan lagu input
-2. **Konsistensi**: Sebagian besar lagu mendapat precision score di atas 0.6
-3. **Variabilitas**: Beberapa lagu mendapat score tinggi (>0.8) sementara lainnya lebih rendah
+**Evaluasi Batch (5 lagu populer):**
+- Mean Precision@10: **0.70**
 
 ### Interpretasi Metrik:
 
@@ -296,12 +301,12 @@ def evaluate_recommendation(song_name, artist_name, top_k=10):
 
 ### Kesimpulan Evaluasi:
 
-Sistem rekomendasi yang dikembangkan menunjukkan performa yang baik dengan precision rata-rata 73%. Hal ini menunjukkan bahwa audio features efektif dalam mengidentifikasi lagu-lagu serupa dalam genre yang sama. Namun, untuk aplikasi real-world, diperlukan evaluasi tambahan dengan metrik seperti diversity, novelty, dan user satisfaction.
+Sistem rekomendasi yang dikembangkan menunjukkan performa yang baik dengan precision rata-rata 70%. Hal ini menunjukkan bahwa audio features efektif dalam mengidentifikasi lagu-lagu serupa dalam genre yang sama. Namun, untuk aplikasi real-world, diperlukan evaluasi tambahan dengan metrik seperti diversity, novelty, dan user satisfaction.
 
 ---
 
 ## Kesimpulan
 
-Proyek ini berhasil mengembangkan sistem rekomendasi musik berbasis content-based filtering yang efektif. Dengan memanfaatkan audio features dan cosine similarity, sistem dapat memberikan rekomendasi lagu yang relevan dengan precision rata-rata 73%. Implementasi hybrid approach dengan genre filtering memberikan fleksibilitas tambahan bagi pengguna untuk mengontrol jenis rekomendasi yang diinginkan.
+Proyek ini berhasil mengembangkan sistem rekomendasi musik berbasis content-based filtering yang efektif. Dengan memanfaatkan audio features dan cosine similarity, sistem dapat memberikan rekomendasi lagu yang relevan dengan precision rata-rata 70%. Implementasi hybrid approach dengan genre filtering memberikan fleksibilitas tambahan bagi pengguna untuk mengontrol jenis rekomendasi yang diinginkan.
 
 Sistem ini dapat diimplementasikan dalam platform musik streaming untuk meningkatkan user experience dan membantu pengguna dalam menemukan musik baru yang sesuai dengan preferensi mereka.

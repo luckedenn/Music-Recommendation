@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Sistem Rekomendasi Musik Spotify
+# Laporan Proyek Machine Learning - Lucas Chandra
 
 ## Project Overview
 
